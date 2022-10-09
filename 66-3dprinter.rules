@@ -1,0 +1,6 @@
+# udev rules for 3D printers, CNCs, laser cutters, 3D scanners, etc.
+# derived from source: https://github.com/hroncok/3dprinter-udev-rules/blob/master/66-3dprinter.rule
+
+# Creality Ender 3 S1 Pro 
+# Bus 001 Device 003: ID 04f2:b551 Chicony Electronics Co., Ltd
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="04f2", ATTRS{idProduct}=="b551", MODE="660", GROUP="dialout"
