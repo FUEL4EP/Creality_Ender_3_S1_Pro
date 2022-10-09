@@ -1,6 +1,12 @@
-# Cura settings for Creality Ender 3 S1 Pro 3D printer (under construction)
+# Creality_Ender_3_S1_Pro [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFUEL4EP%2FCreality_Ender_3_S1_Pro&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) <a href='https://ko-fi.com/FUEL4EP' target='_blank'><img height='20' style='border:0px;height:20px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. I am curious to get your feedback. Any feeback and further improvements are highly welcome.
+# Cura settings for Creality Ender 3 S1 Pro 3D printer (still under construction)
+
+Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. Still some small zits are visible in the test print. I am curious to get your feedback. Any feeback and further improvements are highly welcome.
+
+## Used filament
+
+- PLA with diameter 1.75 mm, color: white
 
 ## Used Cura version
 
@@ -20,6 +26,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## IMPORTANT
 
 - After the firmware upgrade execute a reset to factory settings with the touch screen menu of the 3D printer.
+- Without a factory reset the saving to EEPROM does not work!
 
 ## Install 'pronterface' on your computer / laptop
 
@@ -37,7 +44,56 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 ## Initial settings with Pronterface 
 
-- under construction, please wait a bit and check again
+### Establish a connection
+-  First check that you can connect Pronterface to your Ender 3 S1 Pro printer. Click on 'connect' in Pronterface's GUI. You should get [this message](./Pronterface_connection_is_established.png) in the Pronterface console.
+### Factory Reset
+- Do a factory reset by entering ['M502' G code command into the Pronterface console](./M502_factory_reset.png). You should get [these outputs](./M502_factory_reset_outputs.png).
+- Then check that the EEPROM is writable by issuing a ['M500' command](./M500_save_to_eeprom.png) in the Pronterface console input. You should get the shown outputs '..echo:Settings Stored ..'
+- **IMPORTANT**: After a factory reset, the XYZ distance from the nozzle to the probe trigger-point [is set wrongly](M851_correct_distance_nozzle_touch_pin.png) to 'M851 Probe offset X-40.00 Y-40.00 Z0.00. Therefore, auto bed leveling (ABL) is not working reliably and as expected.
+### Correct the probe offset
+- Please set now the correct probe offset my a command ['M851 X-31.8 Y-40.50' followed by 'M500'](M851_correct_distance_nozzle_touch_pin.png) and verify the result by a 'M851' G code command.
+- The Z offset of the 'M851'probe offset is still zero and needs now to be adjusted to your printer specifically.
+- For that purpose, firstly do a [manual leveling of the bed](https://www.youtube.com/watch?v=Oa5nWPuc6is) with a piece of paper using the Ender 3 S1 Pro's touchpad GUI: First adjust the center and then the 4 corners. Repeat this 2..3 times until all corners and the center are showing the same resistance when pulling the paper.
+- Now save the Z offset to EEPROM by entering 'M500' into the Pronterface's console.
+- Verify the probe offset again by a 'M851' G code command. The Z Offset should now be updated and fitting to your printer hardware.
+### Update the PID parameters of the temperature controllers
+- Next, we are now updating the PID **P**roportional–**I**ntegral–**D**erivative feedback loop parameters of the control of the bed and hotend temperatures and store the determined parameters in the EEPROM. This is done by the Pronterface G code command sequence:
+#### a) For the hotend
+> M303 E0 S215 C5
+- the correct PID parameters are outputted as
+>   #define DEFAULT_Kp \<determined P-value>  
+    #define DEFAULT_Ki \<determined I-value>  
+    #define DEFAULT_Kd \<determined D-value>
+- Now set these determined parameters by a G code sequence:
+>   M301 P\<determined P-value> I\<determined I-value> D\<determined D-value>  
+    M500  
+    M301
+- In my case the outputs were as [follows](M303_PID_autotune_of_hotend.png).
+#### b) For the bed
+> M303 E-1 S60 C5
+- the correct PID parameters are outputted as
+>   #define DEFAULT_Kp \<determined P-value>  
+    #define DEFAULT_Ki \<determined I-value>  
+    #define DEFAULT_Kd \<determined D-value>
+- Now set these determined parameters by a G code sequence:
+>   M304 P\<determined P-value> I\<determined I-value> D\<determined D-value>  
+    M500  
+    M304
+- In my case the outputs were as [follows](M303_PID_autotune_of_bed.png).
+### Run the auto bed leveling (ABL)
+- Now, let's at first preheat the bed to 67 deg C an the hotend to 215 deg C by the G code commands:
+>    M190 S67
+>    M104 S215
+- This takes a bit and results in [these Pronterface outputs](./M190_preheat_bed_M104_preheat_hotend.png)
+- After the bed and hotend temperatures are settled, run the [auto bed levelling](G28_G29_auto_bed_leveling.png) G code command sequence:
+>   G28  
+    G29  
+    M500
+- The final 'M500' is storing the correction matrix to the EEPROM. 
+- In my case the outputs were as [follows](G29_output_followed_by_M500_save_to_eeprom.png).
+- After auto bed leveling, a 'M503' output looks in my case as [follows](./M503_after_G29_auto_bed_leveling.png). Please note the output of the determined Bilinear Leveling Grid.
+### Reconfirm the EEPROM settings
+- Finally, please enter the command 'M503' to get a [summary](./M503_after_having_done_all_settings.png) of the updated EEPROM settings.
 
 ## Load the provided 3D Manufacturing Format file into cura
 - Open the provided 3mf file [Creality_Ender_3_S1_Pro_Cura_4.13.3mf](./Creality_Ender_3_S1_Pro_Cura_4.13.3mf) into Cura
@@ -54,7 +110,13 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     + [Setting 1](./Cura_printer_settings_1.png)
     + [Setting 2](./Cura_printer_settings_2.png)
     + [Setting 3](./Cura_printer_settings_3.png)
-        * Please ensure that the diameter of the filament is set as 1.75 mm
+ - Please ensure that the diameter of the filament is set as 1.75 mm
+        
+
+## Pictures
+
+- [Picture of test structures](./teststructures_1.png)
+- [Zoom picture of test structures](./teststructures_2.png)
     
 
 ## Test print
@@ -64,17 +126,18 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 ## Clone the settings for your own project
 
-- Have fun !
+- **Have fun with your 3D printer!**
 
 ## Marlin G codes
 
-- the used Marlin G codes are described [here](https://marlinfw.org/meta/gcode/)
+- The used Marlin G codes are described [here](https://marlinfw.org/meta/gcode/)
 
 ## Your feedback is welcome and needed
 
-- Please give feedback as an Issue
-- Any further improvement is welcome
-- Many thanks in advance
+- Please give feedback as an [Issue](https://github.com/FUEL4EP/Creality_Ender_3_S1_Pro/issues)
+- Any further improvement is highly welcome
+- Let's try to further improve the Cura  settings for the Creality Ender 3 S1 Pro 3D printer
+- Many thanks for your cooperation and help in advance
 
 
 
