@@ -81,6 +81,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     M304
 - In my case the outputs were as [follows](M303_PID_autotune_of_bed.png).
 ### Run the auto bed leveling (ABL)
+- At first view [this video 'Service tutorial Ender - 3 S1 Plus leveling and printing'](https://www.youtube.com/watch?v=oDpSvNdVAjI).
 - Now, let's at first preheat the bed to 67 deg C an the hotend to 215 deg C by the G code commands:
 >    M190 S67
 >    M104 S215
