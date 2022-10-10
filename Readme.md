@@ -119,6 +119,10 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 - [Picture of test structures](./teststructures_1.png)
 - [Zoom picture of test structures](./teststructures_2.png)
+
+## Always clean your 3d printer bed
+
+- Use isopropyl alcohol to [clean your 3D printer bed](https://3dprinterworldexpo.com/how-to-clean-3d-printer-bed-full-guide/). Use a spray bottle.
     
 
 ## Test print
