@@ -83,6 +83,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ### Run the auto bed leveling (ABL)
 - At first, view [this video 'Service tutorial Ender - 3 S1 Plus leveling and printing'](https://www.youtube.com/watch?v=oDpSvNdVAjI).
 - At second, please follow this video ['Service tutorial Ender - 3 S1 layer shifting debugging'](https://www.youtube.com/watch?v=Io0YQGvBko0) concerning the mechanical check and necessary adjustments.
+- At third, please watch and follow this video ['Ender 3 S1 Pro Auto Bed Leveling fix!'](https://www.youtube.com/watch?v=FjLng4CiktA)
 - Now, let's at first preheat the bed to 67 deg C an the hotend to 215 deg C by the G code commands:
 >    M190 S67
 >    M104 S215
@@ -94,6 +95,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 - The final 'M500' is storing the correction matrix to the EEPROM. 
 - In my case the outputs were as [follows](G29_output_followed_by_M500_save_to_eeprom.png).
 - After auto bed leveling, a 'M503' output looks in my case as [follows](./M503_after_G29_auto_bed_leveling.png). Please note the output of the determined Bilinear Leveling Grid.
+- Repeat the auto bed leveling regularly, e.g. once every two weeks.
 ### Reconfirm the EEPROM settings
 - Finally, please enter the command 'M503' to get a [summary](./M503_after_having_done_all_settings.png) of the updated EEPROM settings.
 
@@ -123,7 +125,10 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## Always clean your 3d printer bed
 
 - Use isopropyl alcohol to [clean your 3D printer bed](https://3dprinterworldexpo.com/how-to-clean-3d-printer-bed-full-guide/). Use a spray bottle.
-    
+
+## Support structures
+
+- Switch on support structures if your project requires them.
 
 ## Test print
 - Do a test print
