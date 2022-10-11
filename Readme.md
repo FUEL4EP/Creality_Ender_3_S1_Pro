@@ -15,6 +15,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## Operating System
 
 - Kubuntu 18.04
+- If you have a different operating system, please adapt below instructions and guidelines appropriately. I personally do only have Linux OS and do not know details of other operating systems.
 
 ## Firmware of Creality Ender 3 S1 Pro
 
