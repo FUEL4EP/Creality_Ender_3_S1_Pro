@@ -138,6 +138,14 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## Clone the settings for your own project
 
 - **Have fun with your 3D printer!**
+## Recommended additional bedleveling tests
+
+- [Bed Leveling Calibration test object](https://www.thingiverse.com/thing:13053)
+- Print results of bedleveling-try_this_one_first.stl **with brim**:
+    - [Picture 1](bedleveling-try_this_one_first_1.png)
+    - [Picture 2](bedleveling-try_this_one_first_2.png)
+    - [Picture 3](bedleveling-try_this_one_first_3.png)
+    - [Picture 4](bedleveling-try_this_one_first_4.png)
 
 ## Marlin G codes
 
