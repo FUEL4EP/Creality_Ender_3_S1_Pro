@@ -149,13 +149,12 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     
 ## 20mm calibration cube with slightly different Cura settings
 - [Here](./20mm_cube_Cura_4.13.3mf) a 20 mm calibration cube with slightly different Cura settings as 3D Manufacturing Format file:
-    + Ironing is switched on for smoothing the Z side
+    + Ironing is switched on for smoothing the Z-side
     + The z seam is [set as user defined to behind left](z_seam_2.png).
     + Here the [Z seam in Cura](./z_seam_1.png)
     + Here the printed [X side's view](./20mm_cube_X.png)
     + Here the printed [Y side's view](./20mm_cube_Y.png)
     + Here the printed [XZ side's view](./20mm_cube_XZ.png)
-    + Almost perfect :-)
 
 ## Marlin G codes
 
