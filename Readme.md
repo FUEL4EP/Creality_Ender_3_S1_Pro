@@ -163,7 +163,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 ## Your feedback is welcome and needed
 
-- Please give feedback as an [Issue](https://github.com/FUEL4EP/Creality_Ender_3_S1_Pro/issues)
+- Please give feedback as an [Issue](https://github.com/FUEL4EP/Creality_Ender_3_S1_Pro/issues) or start a [discussion](https://github.com/FUEL4EP/Creality_Ender_3_S1_Pro/discussions)
 - Any further improvement is highly welcome
 - Let's try to further improve the Cura  settings for the Creality Ender 3 S1 Pro 3D printer
 - Many thanks for your cooperation and help in advance
