@@ -2,7 +2,7 @@
 
 # Cura settings for Creality Ender 3 S1 Pro 3D printer (still under construction)
 
-Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. Still some small zits are visible in the test print. I am curious to get your feedback. Any feeback and further improvements are highly welcome. Sorry for some Cura screen shots in German language.
+Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. Still some small zits are visible in the test print. I am curious to get your feedback. Any feeback and further improvements are highly welcome. Sorry for some Cura screen shots in German language. The coressponding screenshots in English are provided as '\<name>_en.png', but not linked in this Readme.md.
 
 ## Used filament
 
