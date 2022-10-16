@@ -2,7 +2,7 @@
 
 # Cura settings for Creality Ender 3 S1 Pro 3D printer (still under construction)
 
-Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. Still some small zits are visible in the test print. I am curious to get your feedback. Any feeback and further improvements are highly welcome. Sorry for some Cura screen shots in German language. The coressponding screenshots in English are provided as '\<name>_en.png', but not linked in this Readme.md.
+Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my currently best setting for this new printer after a lot of frustrating testing, try and error, and debugging. With these settings and recipices I hope that you can have a better jump start and do not need to go through the same frustration cycles as I had to do. There are for sure possibilities to further improve the Cura settings. Still some small zits are visible in the test print. I am curious to get your feedback. Any feeback and further improvements are highly welcome.
 
 ## Used filament
 
@@ -103,7 +103,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## Load the provided 3D Manufacturing Format file into Cura
 - Open the provided 3mf file [Creality_Ender_3_S1_Pro_Cura_4.13.3mf](./Creality_Ender_3_S1_Pro_Cura_4.13.3mf) into Cura
 - Now you should have a clone of my Cura settings
-- You should get this [Cura screen](./Cura_screen_after_project_load_of_3mf_file.png)
+- You should get this [Cura screen](./Cura_screen_after_project_load_of_3mf_file_en.png)
 - There are 3 test structures included in the 3mf file:
     + 5 squares
     + 20 mm XYZ test box
@@ -112,9 +112,9 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 - You can split these test structures in 3 separate 3mf files easily.
 
 - Check the correct printer settings in Cura
-    + [Setting 1](./Cura_printer_settings_1.png)
-    + [Setting 2](./Cura_printer_settings_2.png)
-    + [Setting 3](./Cura_printer_settings_3.png)
+    + [Setting 1](./Cura_printer_settings_1_en.png)
+    + [Setting 2](./Cura_printer_settings_2_en.png)
+    + [Setting 3](./Cura_printer_settings_3_en.png)
  - Please ensure that the diameter of the filament is set as 1.75 mm
         
 
@@ -157,6 +157,10 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     + Here the printed [Y side's view](./20mm_cube_Y.png)
     + Here the printed [XZ side's view](./20mm_cube_XZ.png)
     + Almost perfect :-)
+
+## Avoid the Z seam for rotationally symmetric models
+
+- For a single rotationally symmetrical model [like this one](single_rotationally_symetrical_model.png) the z seam can be avoided by [these additional settings](rotationally_symmetrical_model_settings.png).
 
 ## Marlin G codes
 
