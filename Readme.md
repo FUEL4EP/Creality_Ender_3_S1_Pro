@@ -161,6 +161,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 ## Avoid the Z seam for rotationally symmetric models
 
 - For a single rotationally symmetrical model [like this one](single_rotationally_symetrical_model.png) the z seam can be avoided by [these additional settings](rotationally_symmetrical_model_settings.png).
+- However, the Cura spiral mode is working **only** for a **single** wall line, i.e. thicker walls won't work.
 
 ## Marlin G codes
 
