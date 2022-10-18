@@ -125,7 +125,9 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 ## Always clean your 3d printer bed
 
-- Use isopropyl alcohol to [clean your 3D printer bed](https://3dprinterworldexpo.com/how-to-clean-3d-printer-bed-full-guide/). Use a spray bottle.
+- **It is absolute essential** for the adhesion of the first layer that the bed is cleaned from any fat or oil from your fingertips before starting any print.
+- Use isopropyl alcohol to [clean your 3D printer bed](https://3dprinterworldexpo.com/how-to-clean-3d-printer-bed-full-guide/). Use a spray bottle. Use a microfiber cloth to clean the bed.
+
 
 ## Support structures
 
