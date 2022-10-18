@@ -139,6 +139,10 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 
 
 ## Clone the settings for your own project
+- The easiest way for cloning the settings is: 
+    - Right click the build plate in Cura
+    - Select 'Clear Build Plate' (Ctrl D)
+    - Open your new STL file
 
 - **Have fun with your 3D printer!**
 ## Recommended additional bedleveling tests
