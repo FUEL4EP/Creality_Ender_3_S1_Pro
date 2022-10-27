@@ -163,6 +163,16 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     + Here the printed [Y side's view](./20mm_cube_Y.png)
     + Here the printed [XZ side's view](./20mm_cube_XZ.png)
     + Almost perfect :-)
+    
+## Example of a case with slightly different Cura settings
+- Here](./case.3mf) a case of a [radiation sensor](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/sketches/HB-UNI-Sensor1-RAD-AL53) with slightly different Cura settings as 3D Manufacturing Format file:
+    + Inner Wall(s) Line Width: 0.35 mm
+    + Infill Line Width: 0.35 mm
+    + Optimize Wall Print Order: Set
+    + Outer Before Inner Walls: Set
+- The infill line width needs still to be optimized (increased).
+- The print is almost perfect with this settings: [Case picture](case.png)
+
 
 ## Avoid the Z seam for rotationally symmetric models
 
