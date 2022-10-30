@@ -116,6 +116,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     + [Setting 2](./Cura_printer_settings_2_en.png)
     + [Setting 3](./Cura_printer_settings_3_en.png)
  - Please ensure that the diameter of the filament is set as 1.75 mm
+ - Cura settings in CSV format are [here](./Creality_Ender_3_S1_Pro_Cura_4.13_parameters.csv)
         
 
 ## Pictures
@@ -143,6 +144,7 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     - Right click the build plate in Cura
     - Select 'Clear Build Plate' (Ctrl D)
     - Open your new STL file
+- For each 3D Manufacturing Format file provided here, a parameter CSV file is provided. The CSV has been exported by Marketplace plugin 'Import Export CSV Profiles'. This plugin also allows to import CSV profiles.
 
 - **Have fun with your 3D printer!**
 ## Recommended additional bedleveling tests
@@ -163,21 +165,31 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
     + Here the printed [Y side's view](./20mm_cube_Y.png)
     + Here the printed [XZ side's view](./20mm_cube_XZ.png)
     + Almost perfect :-)
+- Cura settings in CSV format are [here](./20mm_cube_Cura_4.13_parameters.csv)
     
 ## Example of a case with slightly different Cura settings
-- Here](./case.3mf) a case of a [radiation sensor](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/sketches/HB-UNI-Sensor1-RAD-AL53) with slightly different Cura settings as 3D Manufacturing Format file:
+- [Here](./case.3mf) a case of a [radiation sensor](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/sketches/HB-UNI-Sensor1-RAD-AL53) with slightly different Cura settings as 3D Manufacturing Format file:
     + Inner Wall(s) Line Width: 0.35 mm
     + Infill Line Width: 0.35 mm
     + Optimize Wall Print Order: Set
     + Outer Before Inner Walls: Set
-- The infill line width needs still to be optimized (increased).
-- The print is almost perfect with this settings: [Case picture](case.png)
-
+- The print is almost perfect with these settings:  
+    -    [Case picture 1](case_1.png)
+    -    [Case picture 2](case_2.png)
+- Cura settings in CSV format are [here](./case_Cura_4.13_parameters.csv)
 
 ## Avoid the Z seam for rotationally symmetric models
 
 - For a single rotationally symmetrical model [like this one](single_rotationally_symetrical_model.png) the z seam can be avoided by [these additional settings](rotationally_symmetrical_model_settings.png).
 - However, the Cura spiral mode is working **only** for a **single** wall line, i.e. thicker walls won't work.
+
+## 3DBenchy - The jolly 3D printing torture-test by CreativeTools.se
+- Based on [Thingiverse #3DBenchy - The jolly 3D printing torture-test by CreativeTools.se
+by CreativeTools April 09, 2015](./https://www.thingiverse.com/thing:763622).
+- [Here](./3DBenchy.3mf) the 3DBenchy as 3D Manufacturing Format file.
+- The print is quite good with these settings (no support structures!):
+    - [3DBenchy picture](./3DBenchy.png)
+    - Cura settings in CSV format are [here](./3DBenchy_Cura_4.13_parameters.csv)
 
 ## Marlin G codes
 
