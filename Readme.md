@@ -187,8 +187,10 @@ Since my new Creatlity Ender 3 S1 Pro 3D printer almost drove me crazy, here my 
 - Based on [Thingiverse #3DBenchy - The jolly 3D printing torture-test by CreativeTools.se
 by CreativeTools April 09, 2015](./https://www.thingiverse.com/thing:763622).
 - [Here](./3DBenchy.3mf) the 3DBenchy as 3D Manufacturing Format file.
-- The print is quite good with these settings (no support structures!):
-    - [3DBenchy picture](./3DBenchy.png)
+- The print is quite good with these settings (printed without support structures):
+    - [3DBenchy picture 1](./3DBenchy_1.png)
+    - [3DBenchy picture 2](./3DBenchy_2.png)
+    - [3DBenchy picture 3](./3DBenchy_3.png)
     - Cura settings in CSV format are [here](./3DBenchy_Cura_4.13_parameters.csv)
 
 ## Marlin G codes
