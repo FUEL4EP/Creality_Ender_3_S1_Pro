@@ -57,10 +57,12 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - **IMPORTANT**: After a factory reset, the XYZ distance from the nozzle to the probe trigger-point [is set wrongly](M851_correct_distance_nozzle_touch_pin.png) to 'M851 Probe offset X-40.00 Y-40.00 Z0.00. Therefore, auto bed leveling (ABL) is not working reliably and as expected.
 ### Correct the probe offset
 - Please set now the correct probe offset my a command ['M851 X-31.8 Y-40.50' followed by 'M500'](M851_correct_distance_nozzle_touch_pin.png) and verify the result by a 'M851' G code command.
-- The Z offset of the 'M851'probe offset is still zero and needs now to be adjusted to your printer specifically.
+### Determine the optimum z-offset
+- The Z-offset of the 'M851'probe offset is still zero and needs now to be adjusted to your printer specifically.
 - For that purpose, firstly do a [manual leveling of the bed](https://www.youtube.com/watch?v=Oa5nWPuc6is) with a piece of paper using the Ender 3 S1 Pro's touchpad GUI: First adjust the center and then the 4 corners. Repeat this 2..3 times until all corners and the center are showing the same resistance when pulling the paper.
 - Now save the Z offset to EEPROM by entering 'M500' into the Pronterface's console.
 - Verify the probe offset again by a 'M851' G code command. The Z Offset should now be updated and fitting to your printer hardware.
+- My **recommendation** is to print the 5 pad test structure (see below) and to observe carefully the print of the first layer. **During the print**, you can adapt with the touchpad  the z-offset in small increments or decrements to get the best layer adhesion. Note and use this z-offset for yuor subsequent prints.
 ### Update the PID parameters of the temperature controllers
 - Next, we are now updating the PID **P**roportional–**I**ntegral–**D**erivative feedback loop parameters of the control of the bed and hotend temperatures and store the determined parameters in the EEPROM. This is done by the Pronterface G code command sequence:
 #### a) For the hotend
@@ -181,6 +183,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
     -    [Case picture 1](case_1.png)
     -    [Case picture 2](case_2.png)
 - Cura settings in CSV format are [here](./case_Cura_4.13_parameters.csv)
+- Also here, observe the print of the first layer and adjust manually the z-offset for an optimum result if needed. Only if the first layer looks good, proceed with the print. Else restart and adjust the z-offset.
 
 ## Avoid the Z seam for rotationally symmetric models
 
