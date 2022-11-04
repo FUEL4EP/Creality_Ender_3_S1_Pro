@@ -62,7 +62,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - For that purpose, firstly do a [manual leveling of the bed](https://www.youtube.com/watch?v=Oa5nWPuc6is) with a piece of paper using the Ender 3 S1 Pro's touchpad GUI: First adjust the center and then the 4 corners. Repeat this 2..3 times until all corners and the center are showing the same resistance when pulling the paper.
 - Now save the Z offset to EEPROM by entering 'M500' into the Pronterface's console.
 - Verify the probe offset again by a 'M851' G code command. The Z Offset should now be updated and fitting to your printer hardware.
-- My **recommendation** is to print the 5 pad test structure (see below) and to observe carefully the print of the first layer. **During the print**, you can adapt with the touchpad  the z-offset in small increments or decrements to get the best layer adhesion. Note and use this z-offset for yuor subsequent prints.
+- My **recommendation** is to print the 5 squares test structure (see below) and to observe carefully the print of the first layer. **During the print**, you can adapt with the touchpad  the z-offset in small increments or decrements to get the best layer adhesion. Note and use this z-offset for yuor subsequent prints.
 ### Update the PID parameters of the temperature controllers
 - Next, we are now updating the PID **P**roportional–**I**ntegral–**D**erivative feedback loop parameters of the control of the bed and hotend temperatures and store the determined parameters in the EEPROM. This is done by the Pronterface G code command sequence:
 #### a) For the hotend
