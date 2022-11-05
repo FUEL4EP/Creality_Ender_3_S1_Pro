@@ -23,6 +23,12 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 ## Firmware of Creality Ender 3 S1 Pro
 
+- First check whether your printer has the fitting hardware version:
+    + The required hardware version is **CR-FDM-v24S1_301**
+    + Please check it in the touchpad [at About](./about.png)
+    + If you have a different H/W version, the below described firmware update will **NOT** work.
+    + If your H/W version is **CR-FDM-v2.5.S1_1**, an updated firmware seems not to be available from Creality. Then skip this firmware upgrade step.
+
 - Download the latest firmware from [here](https://www.creality.com/pages/download-ender-3-s1-pro)
 - I used the version  [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER 1 Sep. 2022](https://img.staticdj.com/5610ba6f2a2f941232db55c0ccac8f6b.zip)
 - Install the firmware according this YouTube video ['Service tutorial Ender- 3 S1 Pro flash the mainboard and screen firmware'](https://www.youtube.com/watch?v=NmoRRFW4zTc&t=81s)
