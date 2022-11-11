@@ -25,7 +25,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 - First check whether your printer has the fitting hardware version:
     + The required HW Mainboard Version is **V2.4.S1.301**
-    + The required mainboard CPU is an **ARM STM32F401**, see [here](./STM32F401:CPU.png). Ths [video](https://youtu.be/UMbQarMeT_Q) shows how to open the bottom cover of the printer. 
+    + The required mainboard CPU is an **ARM STM32F401**, see [here](./STM32F401_CPU.png). Ths [video](https://youtu.be/UMbQarMeT_Q) shows how to open the bottom cover of the printer. 
     + The required hardware version is **CR-FDM-v24S1_301**
     + Please check it in the touchpad [at Settings/About](./about.png)
     + If you have a different H/W version, the below described firmware update will **NOT** work.
