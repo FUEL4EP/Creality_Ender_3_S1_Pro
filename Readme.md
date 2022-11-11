@@ -25,6 +25,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 - First check whether your printer has the fitting hardware version:
     + The required HW Mainboard Version is **V2.4.S1.301**
+    + The required mainboard CPU is an **ARM STM32F401**, see [here](./STM32F401:CPU.png). Ths [video](https://youtu.be/UMbQarMeT_Q) shows how to open the bottom cover of the printer. 
     + The required hardware version is **CR-FDM-v24S1_301**
     + Please check it in the touchpad [at Settings/About](./about.png)
     + If you have a different H/W version, the below described firmware update will **NOT** work.
@@ -63,7 +64,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - Then check that the EEPROM is writable by issuing a ['M500' command](./M500_save_to_eeprom.png) in the Pronterface console input. You should get the shown outputs '..echo:Settings Stored ..'
 - **IMPORTANT**: After a factory reset, the XYZ distance from the nozzle to the probe trigger-point [is set wrongly](M851_correct_distance_nozzle_touch_pin.png) to 'M851 Probe offset X-40.00 Y-40.00 Z0.00. Therefore, auto bed leveling (ABL) is not working reliably and as expected.
 ### Correct the probe offset
-- Please set now the correct probe offset my a command ['M851 X-31.8 Y-40.50' followed by 'M500'](M851_correct_distance_nozzle_touch_pin.png) and verify the result by a 'M851' G code command.
+- Please set now the correct probe offset by a command ['M851 X-31.8 Y-40.50' followed by 'M500'](M851_correct_distance_nozzle_touch_pin.png) and verify the result by a 'M851' G code command.
 ### Determine the optimum z-offset
 - The Z-offset of the 'M851'probe offset is still zero and needs now to be adjusted to your printer specifically.
 - For that purpose, firstly do a [manual leveling of the bed](https://www.youtube.com/watch?v=Oa5nWPuc6is) with a piece of paper using the Ender 3 S1 Pro's touchpad GUI: First adjust the center and then the 4 corners. Repeat this 2..3 times until all corners and the center are showing the same resistance when pulling the paper.
