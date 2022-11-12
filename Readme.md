@@ -8,6 +8,10 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 - You can dowload these recipes at Github [here](https://github.com/FUEL4EP/Creality_Ender_3_S1_Pro/releases/latest)
 
+## Forum Discussions
+
+- Some forum discussions about the Auto Bed Leveling of a Creality Ender 3 S1 Pro printer can be found [here](https://forum.drucktipps3d.de/forum/thread/20617-ender-3-s1-pro-abl-probleme-oder-zu-bl%C3%B6d/)
+
 ## Used filament
 
 - PLA with diameter 1.75 mm, color: white
