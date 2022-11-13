@@ -223,6 +223,15 @@ by CreativeTools April 09, 2015](./https://www.thingiverse.com/thing:763622).
 - Let's try to further improve the Cura  settings for the Creality Ender 3 S1 Pro 3D printer
 - Many thanks for your cooperation and help in advance
 
+## Disclaimer
+
+- I accept no liability or responsibility for the accuracy and completeness of the information and materials contained in this Readme.md or provided repository data. Under no circumstances I will be held liable for or responsible in any way for any claims, damages, losses, expenses, costs, or liabilities whatsoever (including, without limitation, any direct or indirect damages for loss of profits, business interruption or loss of information) resulting or arising directly from your use of or inability to use this Readme.md or any websites linked to, from your reliance on the information material on this provided information, even if I have been advised of the possibility of such damages in advance.
+
+- I cannot guarantee the validity of the information found here. While I use reasonable efforts to include accurate and up to date information, I make no warranties as to the accuracy of the content and assume no liability or responsibility for an error or omission in the content.
+
+- Any processes portrayed in linked videos should be used at your own risk. I have no responsibility or liability for any claims, damages, losses, expenses, costs, or liabilities whatsoever incurred as a result of watching or following the content in any linked videos.
+
+- Updating the firmware of your Creality Ender 3 S1 Pro 3D printer may damage your printer and make it non-operational. **Any update of your printer's firmware is at your own risk.**
 
 
 
