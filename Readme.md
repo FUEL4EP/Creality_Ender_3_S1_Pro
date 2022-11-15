@@ -118,6 +118,18 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 ### Reconfirm the EEPROM settings
 - Finally, please enter the command 'M503' to get a [summary](./M503_after_having_done_all_settings.png) of the updated EEPROM settings.
 
+### Use of a digital gauge for mechanically checking the bed leveling
+
+- You can use a digital gauge, e.g. [this one](https://www.amazon.de/AUTOUTLET-Messtaster-Messbereich-Indikator-Indicators/dp/B092278DRT), for checking the leveling of the bed.
+- A suitable 3D printable holder 'S1 Dial Gauge v1.stl' can be downloaded from [here](https://media.printables.com/media/prints/177982/stls/1667253_1678fe08-46c3-4ab4-beba-6f18e169e04a/s1-dial-gauge-v1.stl)
+- You need additional three suitable M3 skrews and a M3 nut.
+- Here some pictures of the installed digital gauge:
+    + [Picture of installed digital gauge 1](./digital_gauge_1.png)
+    + [Picture of installed digital gauge 2](./digital_gauge_2.png)
+- **IMPORTANT: Do not yet insert the digital gauge into the holder. Always start with a demounted digital gauge!**
+- Move the X and Y axis by the touchpad menu 'Ready => Axis Move'
+    + **WARNING:** Insert the digital gauge into the holder not until the home position has been reached.
+
 ## Load the provided 3D Manufacturing Format file into Cura
 - Open the provided 3mf file [Creality_Ender_3_S1_Pro_Cura_4.13.3mf](./Creality_Ender_3_S1_Pro_Cura_4.13.3mf) into Cura
 - Now you should have a clone of my Cura settings
