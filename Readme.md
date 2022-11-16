@@ -126,6 +126,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - Here some pictures of the installed digital gauge:
     + [Picture of installed digital gauge 1](./digital_gauge_1.png)
     + [Picture of installed digital gauge 2](./digital_gauge_2.png)
+    + [Picture of installed digital gauge 3](./digital_gauge_3.png)
 - **IMPORTANT: Do not yet insert the digital gauge into the holder. Always start with a demounted digital gauge!**
 - Move the X and Y axis by the touchpad menu 'Ready => Axis Move'
     + **WARNING:** Insert the digital gauge into the holder not until the home position has been reached.
