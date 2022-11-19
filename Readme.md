@@ -58,6 +58,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 - Cura 4.13.0 is the latest version that is still running on Kubuntu 18.04
 - Download it from [here](https://github.com/Ultimaker/Cura/releases/tag/4.13.0) as an AppImage
+- **WARNING**: **These recipies were tested only with Cura 4.13.0. Cura 5.x ist behaving completely different and won't work with these recipies.**
 
 ## Initial settings with Pronterface 
 
