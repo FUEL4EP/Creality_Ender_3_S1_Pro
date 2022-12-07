@@ -38,7 +38,8 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - Download the latest firmware from [here](https://www.creality.com/pages/download-ender-3-s1-pro)
 - **UPDATE 05th Dec 2022**: There is a new firmware [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER](https://img.staticdj.com/7dd7a212124f0e7c8153fdfbe741d140.zip) available at the Creality site since 29th Nov 2022. I've not yet tested this new version. I will do this within a couple of days and report it here.
 - **UPDATE 06th Dec 2022**: The firmware binaries of the release on 1st Sept 2022 and 29th November are identical: 2.0.8.24F4. I've no idea why Creality did a new release for no obvious reason.
-- So far I used the version  [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER 1 Sep. 2022](https://img.staticdj.com/5610ba6f2a2f941232db55c0ccac8f6b.zip)
+- **UPDATE 07th Dec 2022**: The Creality firmware updates dated 01.Sep.2022 and 29.Nov.2022 are differing just in the Readme.txt's installation instructions for the display firmware. Please follow the instructions of the latest released firmware version.
+- So far I used the version  [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER 29 Nov. 2022](https://img.staticdj.com/7dd7a212124f0e7c8153fdfbe741d140.zip)
 - Install the firmware according this YouTube video ['Service tutorial Ender- 3 S1 Pro flash the mainboard and screen firmware'](https://www.youtube.com/watch?v=NmoRRFW4zTc&t=81s)
 - Please note also the [Release Notes](./Release_Notes_of_firmware.png) in [Creality's release page](https://www.creality.com/pages/download-ender-3-s1-pro)
 
