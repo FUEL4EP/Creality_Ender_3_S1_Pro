@@ -22,7 +22,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 
 ## Operating System
 
-- Kubuntu 18.04
+- Kubuntu 22.04
 - If you have a different operating system, please adapt below instructions and guidelines appropriately. I personally do only have Linux OS and do not know details of other operating systems.
 
 ## Firmware of Creality Ender 3 S1 Pro
@@ -39,8 +39,9 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - **UPDATE 05th Dec 2022**: There is a new firmware [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER](https://img.staticdj.com/7dd7a212124f0e7c8153fdfbe741d140.zip) available at the Creality site since 29th Nov 2022. I've not yet tested this new version. I will do this within a couple of days and report it here.
 - **UPDATE 06th Dec 2022**: The firmware binaries of the release on 1st Sept 2022 and 29th November are identical: 2.0.8.24F4. I've no idea why Creality did a new release for no obvious reason.
 - **UPDATE 07th Dec 2022**: The Creality firmware updates dated 01.Sep.2022 and 29.Nov.2022 are differing just in the Readme.txt's installation instructions for the display firmware. Please follow the instructions of the latest released firmware version.
-- So far I used the version  [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.24F4_FDM_LASER 29 Nov. 2022](https://img.staticdj.com/7dd7a212124f0e7c8153fdfbe741d140.zip)
-- Install the firmware according this YouTube video ['Service tutorial Ender- 3 S1 Pro flash the mainboard and screen firmware'](https://www.youtube.com/watch?v=NmoRRFW4zTc&t=81s)
+-    **UPDATE 17th FEB 2023**: Creality released a new firmware version [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER](https://img.staticdj.com/7659d8c703ce7d0f7072d58b7f4b5f13.zip) on 2nd Feb 2023. Happily, this firmware version is fixing the XYZ distance from the nozzle to the probe trigger-point.
+- So far I used the version  [Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER](https://img.staticdj.com/7659d8c703ce7d0f7072d58b7f4b5f13.zip)
+- Install the firmware according this YouTube video ['Service tutorial Ender- 3 S1 Pro flash the mainboard and screen firmware'](https://www.youtube.com/watch?v=_axl9OhRV1k)
 - Please note also the [Release Notes](./Release_Notes_of_firmware.png) in [Creality's release page](https://www.creality.com/pages/download-ender-3-s1-pro)
 
 ## IMPORTANT
@@ -70,10 +71,14 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 ### Factory Reset
 - Do a factory reset by entering ['M502' G code command into the Pronterface console](./M502_factory_reset.png). You should get [these outputs](./M502_factory_reset_outputs.png).
 - Then check that the EEPROM is writable by issuing a ['M500' command](./M500_save_to_eeprom.png) in the Pronterface console input. You should get the shown outputs '..echo:Settings Stored ..'
-- **IMPORTANT**: After a factory reset, the XYZ distance from the nozzle to the probe trigger-point [is set wrongly](M851_correct_distance_nozzle_touch_pin.png) to 'M851 Probe offset X-40.00 Y-40.00 Z0.00. Therefore, auto bed leveling (ABL) is not working reliably and as expected.
-### Correct the probe offset
+
+## Fix the XYZ distance from the nozzle to the probe trigger-point
+- These steps are only necessary for firmware versons **prior to** Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER
+- Starting with firmware version Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER as of 2nd Feb 2023 the XYZ distance from the nozzle to the probe trigger-point is set correctly in the firmware.
+- **IMPORTANT**: For firmware versons **prior to** Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER after a factory reset, the XYZ distance from the nozzle to the probe trigger-point [is set wrongly](M851_correct_distance_nozzle_touch_pin.png) to 'M851 Probe offset X-40.00 Y-40.00 Z0.00. Therefore, auto bed leveling (ABL) is not working reliably and as expected.
+### Correct the probe offset (only necessary for firmware versions prior to Ender-3 S1_Pro_HWv24S1_301_SWV2.0.8.26F4_FDM_LASER)
 - Please set now the correct probe offset by a command ['M851 X-31.8 Y-40.50' followed by 'M500'](M851_correct_distance_nozzle_touch_pin.png) and verify the result by a 'M851' G code command.
-### Determine the optimum z-offset
+## Determine the optimum z-offset
 - The Z-offset of the 'M851'probe offset is still zero and needs now to be adjusted to your printer specifically.
 - For that purpose, firstly do a [manual leveling of the bed](https://www.youtube.com/watch?v=Oa5nWPuc6is) with a piece of paper using the Ender 3 S1 Pro's touchpad GUI: First adjust the center and then the 4 corners. Repeat this 2..3 times until all corners and the center are showing the same resistance when pulling the paper.
 - Now save the Z offset to EEPROM by entering 'M500' into the Pronterface's console.
@@ -104,12 +109,12 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
     M304
 - In my case the outputs were as [follows](M303_PID_autotune_of_bed.png).
 ### Run the auto bed leveling (ABL)
-- At first, view [this video 'Service tutorial Ender - 3 S1 Plus leveling and printing'](https://www.youtube.com/watch?v=oDpSvNdVAjI).
+- At first, view [this video 'Service Tutorial Ender - 3S1 Pro&Ender - 3 S1 Plus Leveling'](https://www.youtube.com/watch?v=VtSVgwfsRpA).
 - At second, please follow this video ['Service tutorial Ender - 3 S1 layer shifting debugging'](https://www.youtube.com/watch?v=Io0YQGvBko0) concerning the mechanical check and necessary adjustments.
 - At third, please watch and follow this video ['Ender 3 S1 Pro Auto Bed Leveling fix!'](https://www.youtube.com/watch?v=FjLng4CiktA)
 - Now, let's at first preheat the bed to 67 deg C an the hotend to 215 deg C by the G code commands:
->    M190 S67
->    M104 S215
+>   M190 S67  
+    M104 S215
 - This takes a bit and results in [these Pronterface outputs](./M190_preheat_bed_M104_preheat_hotend.png)
 - After the bed and hotend temperatures are settled, run the [auto bed levelling](G28_G29_auto_bed_leveling.png) G code command sequence:
 >   G28  
@@ -118,7 +123,7 @@ Since my new Creality Ender 3 S1 Pro 3D printer almost drove me crazy, here my c
 - The final 'M500' is storing the correction matrix to the EEPROM. 
 - In my case the outputs were as [follows](G29_output_followed_by_M500_save_to_eeprom.png).
 - After auto bed leveling, a 'M503' output looks in my case as [follows](./M503_after_G29_auto_bed_leveling.png). Please note the output of the determined Bilinear Leveling Grid.
-- Repeat the auto bed leveling regularly, e.g. once every two weeks.
+- Repeat the auto bed leveling regularly, e.g. once every two months.
 ### Reconfirm the EEPROM settings
 - Finally, please enter the command 'M503' to get a [summary](./M503_after_having_done_all_settings.png) of the updated EEPROM settings.
 
